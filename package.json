@@ -1,0 +1,16 @@
+{
+  "name": "amjenet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "home":"https://chathura002.github.io/amjenet",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}

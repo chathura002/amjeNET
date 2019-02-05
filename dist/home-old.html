@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="amjePagesStyles.css" />
+<!--jQuery-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="jqFancyTransitions.js"></script>
+<script>
+$(document).ready( function(){
+$('#slide_show_frame').jqFancyTransitions({ width: 400, height: 300 });
+
+function showTheList() {
+  var i = 1;
+  function showOne() {
+    if (i === 1) $('#slider_quote ul li').hide();
+    $('#slider_quote ul li').eq(i - 1).delay(500).fadeIn(500, function() {
+      $('#slider_quote ul li').eq(i - 1).delay(4000).fadeOut(500, function() {
+        if (++i > 5) i = 1;
+        showOne();
+      });
+    });
+  }
+  showOne();
+}
+showTheList();
+});
+</script>
+<title>amjeNET</title>
+</head>
+
+<body>
+<!--background styles-->
+<div class="top_container">
+<div class="top_bar"></div>
+<div class="top_banner_bg"><div class="bg_gradient"></div></div>
+</div>
+<!--end of background styles-->
+<!--main container start-->
+<div class="main_container">
+<div id="company_name"></div>
+<div id="company_logo"></div>
+
+<!--top navigation manue-->
+<ul class="topMenu">
+<li><a href="#">CONTCT US</a></li>
+<li><a href="#">SERVICES</a></li>
+<li><a href="#">ABOUT US</a></li>
+<li><a href="#">HOME</a></li>
+</ul>
+<!--top navigation manu end-->
+<!--slide show-->
+<div class="slide_show_container">
+<div id="slide_show_frame">
+<img src='images/img1.jpg' alt='' />
+<img src='images/img2.jpg' alt='' />
+<img src='images/img3.jpg' alt='' />
+<img src='images/img4.jpg' alt='' />
+<img src='images/img5.jpg' alt='' />
+</div>
+<div id="slider_quote">
+<ul>
+<li>All types of residential to medium size business networks</li>
+<li>Simple and High quality new technology</li>
+<li>VOIP - Next level of communication systems</li>
+<li>Wide range of multimedia solutions for your home and office</li>
+<li>Extraordinary music and sound systems</li>
+</ul>
+</div>
+</div>
+<!--end of slide show-->
+</div>
+<!--end of main container-->
+</body>
+</html>
