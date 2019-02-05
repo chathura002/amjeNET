@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>amjeNET-Innovative Solutions</title>
+<link rel="stylesheet" href="amjePagesStyles.css" />
+<!--jQuery-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+<script> 
+  $(document).ready(function(){
+      $("#header-container").load("header.html"); 
+	  $("#footer_container").load("footer.html");
+	  $("#middle_container").css({"height":'500px'}); 
+	  $(".middle_right_container").css({"width":'560px'});
+    }); 
+    </script> 
+    
+    <!--Form validation-->
+    <script>
+	function validform(){
+	var name=document.forms["form1"]["name"].value;
+	var mail_=document.forms["form1"]["e-mail"].value;
+	var tp=document.forms["form1"]["tp"].value;
+	var msg=document.forms["form1"]["txtMessage"].value;
+	
+	if(name=="" || name==null)
+	{
+		alert("Please fill the name");
+		}
+		if(mail_=="" || mail_==null)
+	{
+		alert("Please fill email address");
+		}
+		if(tp=="" || tp==null)
+	{
+		alert("Please fill Telephone Number");
+		}
+		if(msg=="" || msg==null)
+	{
+		alert("Please fill message");
+		}
+		var atpos=mail_.indexOf("@");
+		var dotpos=mail_.lastIndexOf(".");
+		if (atpos<1 || dotpos<atpos+2 || dotpos+2>=mail_.length){
+			alert("Not a valid e-mail address")
+			}
+	}
+    </script>
+</head>
+
+<body>
+<!--header file-->
+<div id="header-container"></div>
+<!--start middle container-->
+<div id="middle_wrapper">
+<!--starting middle container-->
+<div id="middle_container">
+<!--middle left start-->
+<div class="middle_left_container_contact">
+<h3>CONTACT US</h3>
+<div class="page_writeups">
+11<br/> Rogan Street <br/>Mt Roskill<br/>Auckland 1041<br/><br/>P: 09 9 729 769<br/> M: 022 13 66 402<br/> E mail: <a href="mailto:info@amjenet.co.nz?Subject=Hello%20again" target="_top">
+info@amjenet.co.nz</a>
+</div>
+</div>
+<!--end of middle left-->
+<!--middle right start-->
+<div class="middle_right_container">
+<h3>OUR LOCATION</h3>
+<div id="google_map">
+<iframe width="560" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.co.nz/maps?sll=-36.9135081,174.7478059&amp;sspn=0.04103830204574426,0.11725589422368982&amp;t=m&amp;q=11+Rogan+St,+Mt+Roskill,+Auckland&amp;dg=opt&amp;ie=UTF8&amp;hq=&amp;hnear=11+Rogan+St,+Mt+Roskill,+Auckland+1041&amp;z=14&amp;ll=-36.920005,174.745395&amp;output=embed"></iframe><br /><small><a href="https://www.google.co.nz/maps?sll=-36.9135081,174.7478059&amp;sspn=0.04103830204574426,0.11725589422368982&amp;t=m&amp;q=11+Rogan+St,+Mt+Roskill,+Auckland&amp;dg=opt&amp;ie=UTF8&amp;hq=&amp;hnear=11+Rogan+St,+Mt+Roskill,+Auckland+1041&amp;z=14&amp;ll=-36.920005,174.745395&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+</div>
+</div>
+<!--end of middle right-->
+<!--inquiry start-->
+<div class="inq_form">
+<h3>SUBMIT INQUIRIES</h3>
+<form action="amjeMail.php" method="post" name="amjeMail" form id="form1" onsubmit="validform()">
+<div class="txtDiv">
+      <input type="text" name="name" id="name" style="width:350px; font-family:Arial, Helvetica, sans-serif; font-size:12px" placeholder="Your Name*"/>
+  </div>
+    
+        <div class="txtDiv">
+      <input type="text" name="e-mail" id="e-mail" style="width:350px; font-family:Arial, Helvetica, sans-serif; font-size:12px" placeholder="Your E-Mail Address*"/>
+  </div>
+    
+    <div class="txtDiv">
+      <input type="text" name="tp" id="tp" style="width:350px; font-family:Arial, Helvetica, sans-serif; font-size:12px" placeholder="Your Contact No*"/>
+  </div>
+  
+  <div class="txtArea">
+  <textarea name="txtMessage" id="txtMessage" cols="1" rows="2" style="width:350px; font-family:Arial, Helvetica, sans-serif; font-size:12px" placeholder="Your Message"></textarea>
+  </div>
+
+<div class="btnDiv">
+  <input type="submit" name="btn" id="btn" value="Submit" style="width:80px;"/>
+</div>
+
+</form>
+</div>
+<!--inquiry end-->
+</div>
+<!--end of middle container-->
+</div>
+<!--end of middle wrapper-->
+<div id="footer_container"></div>
+</body>
+</html>

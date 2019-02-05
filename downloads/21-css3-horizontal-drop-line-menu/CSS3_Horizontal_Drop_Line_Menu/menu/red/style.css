@@ -1,0 +1,85 @@
+/* CSS DOCUMENT */
+
+/* General style ************************************************** */
+body {
+	font: normal 85% arial,verdana,tahoma,sans-serif;
+	color: #777;
+	margin: 0;
+	padding: 0;
+	width: 960px;
+	margin: 0 auto;
+}
+a {
+	text-decoration: none;
+}
+/* Menu style ************************************************** */
+ul#nav {
+	width: 960px;
+	margin: 100px auto;
+	padding: 0;
+	list-style: none;
+	background: -webkit-gradient(linear, left top, left bottom, from(#CE4848), to(#770000));
+	background: -moz-linear-gradient(top,  #CE4848, #770000);
+}
+ul#nav li {
+	display: inline;
+}
+ul#nav li a {
+	float: left;
+	font: normal 1em arial, sans-serif;
+	line-height: 40px;
+	color: #fff;
+	text-decoration: none;
+	text-shadow: 0px 1px 1px #770000;
+	margin: 0;
+	padding: 0 30px;
+	border-top: 1px solid #770000;
+	border-left: 1px solid #770000;
+	border-right: 1px solid #770000;
+	background: -webkit-gradient(linear, left top, left bottom, from(#CE4848), to(#770000));
+	background: -moz-linear-gradient(top,  #CE4848, #770000);
+	-moz-border-radius-topright: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-webkit-border-top-left-radius: 5px;     
+}
+ul#nav .current a, ul#nav li:hover > a  {
+	color: #fff;
+	text-decoration: none;
+	background: #CE4848;
+}
+/* Sub Menu style ************************************************** */
+ul#nav ul {
+	display: none;
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #770000;
+	border-left: 1px solid #770000;
+	border-right: 1px solid #770000;
+}
+ul#nav li:hover > ul {
+	position: absolute;
+	display: block;
+	width: 960px;
+	height: 40px;
+	margin: 40px 0 0 0;
+	background: -webkit-gradient(linear, left top, left bottom, from(#CE4848), to(#770000));
+	background: -moz-linear-gradient(top,  #CE4848, #770000);
+}
+ul#nav li:hover > ul li a {
+	float: left;
+	font: normal 1em arial, sans-serif;
+	line-height: 40px;
+	color: #fff;
+	margin: 0;
+	padding: 0 30px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#CE4848), to(#770000));
+	background: -moz-linear-gradient(top,  #CE4848, #770000);
+	border: none;
+}
+ul#nav li:hover > ul li a:hover {
+	color: #fff;
+	text-shadow: 0px 0px 5px #CE4848;
+	text-decoration: none;
+	
+}

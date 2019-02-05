@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>amjeNET</title>
+<link rel="stylesheet" href="amjeMainStyles.css"  />
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>-->
+<script type="text/javascript">
+/*$(function(){
+	var h=window.innerHeight;
+$('.main_container').css('height',h +'px')
+});$(document).ready*/
+$(window).load(function(){
+var intWidth = $(window).innerWidth();
+var intHeight = $(window).innerHeight();
+
+var xCenter = intWidth / 2;
+var yCenter = intHeight / 2;
+
+var xMargin=xCenter-490;
+var yMargin=yCenter-288;
+
+/*alert("The center of the window is: " + xMargin + "x " + yMargin + "y");*/
+
+$(".main_container").css("margin-top",yMargin);
+$(".main_container").css("margin-left",xMargin);
+});
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43601528-1', 'amjenet.co.nz');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body class="body_properties">
+<div class="main_container">
+<div class="site_title" title="amjeNET">amjeNET</div>
+<div id="tagline">Innovative ICT Solutions</div>
+
+<div id="global_navigation_wrapper">
+<ul id="global_nav">
+<a href="residential.html"><li class="one"></li></a>
+<a href="business.html"><li class="two"></li></a>
+<a href="communications.html"><li class="three"></li></a>
+<a href="multimedia.html"><li class="four"></li></a>
+</ul>
+<hr />
+<ul class="footerMenu">
+	<li><a href="home.html">HOME</a></li>
+	<li><a href="about us.html">ABOUT US</a></li>
+	<li><a href="services.html">SERVICES</a></li>
+	<li><a href="contact us.html">CONTACT US</a></li>
+    </ul>
+    <div id="footer_copyright">© Copyright amjeNET. All Rights Reserved.</div>
+</div>
+</div>
+</body>
+</html>
